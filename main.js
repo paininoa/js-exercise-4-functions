@@ -63,6 +63,7 @@ prendendo alternativamente gli elementi da uno e dall’altro
 es. [a,b,c], [1,2,3] → [a,1,b,2,c,3]
 */
 
+/*
 const frutta = ["mela", "pera", "banana"];
 const numeri = [1, 2, 3];
 
@@ -81,3 +82,45 @@ function mergeAltV2(arr1, arr2) {
 }
 
 console.log(mergeAltV2(frutta, numeri));
+*/
+
+// 1. ESERCIZI FATTI IN CLASSE CON HYUR 27 ottobre
+// Crea una funzione che ritorna la versione capitalizzata di una stringa (ciao>Ciao). Chiedi all'utente una stringa e mostragli la versione capitalizzata di quella stringa.
+
+/*
+let parolaUtente = prompt("Scrivi una parola");
+
+function capitalize(text) {
+  let firstLetter = text[0];
+  let firstLetterCap = firstLetter.toUpperCase();
+  let restoTesto = text.substring(1, text.length);
+  restoTesto = restoTesto.toLowerCase();
+  return firstLetterCap + restoTesto;
+}
+
+let saluto = capitalize(parolaUtente);
+console.log(saluto);
+*/
+
+// 2. ESERCIZI FATTI IN CLASSE CON HYUR 27 ottobre
+// Crea una funzione che ritorna la versione tamarra (un carattere maiuscolo, uno minuscolo, ...) di una stringa. Ex. 'Benvenuto' -> 'bEnVeNuTo'
+
+/*
+function ridicolizza(testo) {
+  let testoRidicolizzato = "";
+  for (let i = 0; i < testo.length; i++) {
+    let lettera = testo[i];
+    if (i % 2 === 0) {
+      let letteraMinuscola = lettera.toLowerCase();
+      testoRidicolizzato += letteraMinuscola;
+    } else {
+      let letteraMaiuscola = lettera.toUpperCase();
+      testoRidicolizzato += letteraMaiuscola;
+    }
+  }
+  return testoRidicolizzato;
+}
+
+let risultato = ridicolizza("benvenuto");
+console.log(risultato);
+*/
