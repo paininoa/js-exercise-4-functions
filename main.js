@@ -121,6 +121,35 @@ function ridicolizza(testo) {
   return testoRidicolizzato;
 }
 
-let risultato = ridicolizza("benvenuto");
-console.log(risultato);
+window.addEventListener("load", function () {
+  let inputUtente = prompt("Scrivi una parola");
+  let parolaRidicolizzata = ridicolizza(inputUtente);
+  let paragrafo = document.getElementById("risultato");
+  paragrafo.innerText = parolaRidicolizzata;
+});
 */
+
+// 3. ESERCIZI FATTI IN CLASSE CON HYUR 27 ottobre
+// Crea una funzione che calcola la media aritmetica di una lista di numeri. Chiedi all'utente quanti numeri ha a disposizione e poi chiedigli i numeri e quindi stampa su un <p> con id 'risultato' la media di questi numeri.
+
+function calcolaMedia(listaNumeri) {
+  let somma = 0;
+  for (let i = 0; i < listaNumeri.length; i++) {
+    let numero = listaNumeri[i];
+    somma += numero;
+  }
+  let media = somma / listaNumeri.length;
+  return media;
+}
+
+window.addEventListener("load", function () {
+  let totaleNumeri = Number(prompt("Su quanti numeri vuoi fare la media?"));
+  let numeri = [];
+  for (let i = 0; i < totaleNumeri; i++) {
+    let numeroCorrente = Number(prompt(`Scrivi il numero ${i}`));
+    numeri[i] = numeroCorrente;
+  }
+  let media = calcolaMedia(numeri);
+  let paragrafo = document.getElementById("risultato");
+  paragrafo.innerText = `La media dei tuoi numeri è ${media}`;
+});
